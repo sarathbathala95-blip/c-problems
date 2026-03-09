@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+int main()
+{
+    int m;
+    int a;
+    int c;
+
+    scanf("%d%d", &m, &a);
+
+    if (a < 75)
+    {
+        c = 0;
+    }
+    else
+    {
+        c = m / 10;
+    }
+
+    switch (c)
+    {
+        case 10:
+        case 9:
+        case 8:
+            printf("Distinction\n");
+            break;
+
+        case 7:
+            if (m >= 75)
+            {
+                printf("Distinction\n");
+            }
+            else
+            {
+                printf("Pass\n");
+            }
+            break;
+
+        case 6:
+        case 5:
+            printf("Pass\n");
+            break;
+
+        default:
+            printf("Fail\n");
+    }
+
+    return 0;
+}
