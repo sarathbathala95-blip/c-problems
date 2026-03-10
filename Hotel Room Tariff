@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class HotelTariff {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int roomType = sc.nextInt();
+        char season = sc.next().charAt(0);
+        int tariff = 0;
+
+        switch(roomType) {
+            case 1:
+                if(season == 'A')
+                    tariff = 2500;
+                else if(season == 'B')
+                    tariff = 2000;
+                break;
+
+            case 2:
+                if(season == 'C')
+                    tariff = 4000;
+                else if(season == 'D')
+                    tariff = 3000;
+                break;
+        }
+
+        System.out.println("₹" + tariff);
+    }
+}
